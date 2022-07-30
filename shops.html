@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- OpenLayers API -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+
+        <!-- Maptiler API -->
+        <script src="https://cdn.maptiler.com/ol/v6.12.0/ol.js"></script>
+        <script src="https://cdn.maptiler.com/ol-mapbox-style/v6.8.3/olms.js"></script>
+        <link rel="stylesheet" href="https://cdn.maptiler.com/ol/v6.12.0/ol.css">
+
+        <script src="shops.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SG Climbing</title>
+    </head>
+    <body>
+        <!-- Top bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container my-2">
+              <a class="navbar-brand" href="#">
+                <img src="https://media.istockphoto.com/vectors/girl-is-climbing-in-climbing-hall-bouldering-equipment-indoor-flat-vector-id1310925649?b=1&k=20&m=1310925649&s=612x612&w=0&h=DRL8j_Ps-I8DVHqH7ustBHRF-jynRr0HQjK6hgNKE6o=" width="40" height="40">
+                SG Climbing</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" href="map.html">Climbing Gyms</a>
+                  <a class="nav-link active" href="#">Equipment Shops</a>
+                  <!-- <a class="nav-link disabled">Disabled</a> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="container mt-4">
+            <h2>Shops for Climbing Gear</h2>
+          </div>
+
+          <!-- Find specific brand for shoes and harness -->
+          <div class="container mt-5">
+            <div class="card-group">
+
+              <!-- Shoes -->
+              <div class="card">
+                <img src="https://shop.theclimbingacademy.com/wp-content/uploads/2022/03/20211007-IMG_9879-600x600.jpg" class="card-img-top cropped" alt="Climbing Shoes">
+                <div class="card-body">
+                  <h5 class="card-title">Climbing Shoes</h5>
+                  <!-- Select menu -->
+                  <select class="form-select" id="shoes-select" aria-label="Shoe Select"></select>
+                  <p class="card-text" id="shoes-select-description"></p>
+                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+              </div>
+
+              <!-- Harnesses -->
+              <div class="card">
+                <img src="https://www.rei.com/dam/vagnini_091416_0496_caring_for_your_climbing_harness_lg.jpg" class="card-img-top cropped" alt="Harnesses">
+                <div class="card-body">
+                  <h5 class="card-title">Harnesses</h5>
+                  <!-- Select menu -->
+                  <select class="form-select" id="harness-select" aria-label="Harness Select"></select>
+                  <p class="card-text" id="harness-select-description"></p>
+                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+              </div>
+            </div>
+
+    </body>
+</html>

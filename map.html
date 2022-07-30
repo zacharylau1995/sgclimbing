@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+        <!-- OpenLayers API -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+
+        <!-- Maptiler API -->
+        <script src="https://cdn.maptiler.com/ol/v6.12.0/ol.js"></script>
+        <script src="https://cdn.maptiler.com/ol-mapbox-style/v6.8.3/olms.js"></script>
+        <link rel="stylesheet" href="https://cdn.maptiler.com/ol/v6.12.0/ol.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SG Climbing</title>
+    </head>
+    <body>
+        <!-- Top bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container my-2">
+              <a class="navbar-brand" href="#">
+                <img src="https://media.istockphoto.com/vectors/girl-is-climbing-in-climbing-hall-bouldering-equipment-indoor-flat-vector-id1310925649?b=1&k=20&m=1310925649&s=612x612&w=0&h=DRL8j_Ps-I8DVHqH7ustBHRF-jynRr0HQjK6hgNKE6o=" width="40" height="40">
+                SG Climbing</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link active" href="#">Climbing Gyms</a>
+                  <a class="nav-link" href="shops.html">Equipment Shops</a>
+                  <!-- <a class="nav-link disabled">Disabled</a> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="container mt-4">
+            <div class="row justify-content-between">
+              <div class="col-9">
+                <h2>Climbing Gyms in Singapore</h2>
+                <!-- Filters -->
+                <!-- <div class="container"> -->
+                  <!-- <div class="col"> -->
+                    <button class="btn btn-primary shadow-none text-end mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                        Filters
+                    </button>
+                  <!-- </div> -->
+                  <!-- Reset view button -->
+                  <!-- <div class="col"> -->
+                    <button class="btn btn-primary shadow-none text-end mt-2" id="reset-view" type="button">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                      </svg>
+                      Reset View
+                    </button>
+                  <!-- </div> -->
+                <!-- </div> -->
+              </div>
+
+              <!-- Gym counter on canvas -->
+              <div class="col-3 text-end">
+                <!-- <h6 class="text-muted mb-0">Gyms</h6> -->
+                <h5 class="display-3 fw-bold my-0" id="gymcounter-on"></h5>
+                <h6 class="text-muted my-0">Gyms</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filters</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Filter button groups -->
+              <h6 class="text-muted mb-0">Gyms</h6>
+              <h5 class="display-3 fw-bold" id="gymcounter"></h5>
+
+              <h6 class="mt-4">Region</h6>
+              <div class="btn-group" role="group" aria-label="Region">
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="central" type="button">Central</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="north" type="button">North</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="east" type="button">East</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="west" type="button">West</button>
+              </div>
+              <p></p>
+              <h6>Climbing Type</h6>
+              <div class="btn-group" role="group" aria-label="Climbing Type">
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="boulder" type="button">Boulder</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="autobelay" type="button">Autobelay</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="toprope" type="button">Top Rope</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="lead" type="button">Lead</button>
+              </div>
+              <p></p>
+              <h6>System Board</h6>
+              <div class="btn-group" role="group" aria-label="System Board">
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="moonboard" type="button">MoonBoard</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="kilter" type="button">Kilter Board</button>
+                <button class="btn btn-outline-primary shadow-none" data-bs-toggle="button" id="tension" type="button">Tension Board</button>
+              </div>
+              <!-- Clear all filters button -->
+              <p></p>
+              <div>
+                <button class="btn btn-danger shadow-none " id="clearall" type="button">Clear All</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="container mt-4">
+            <div id="map" class="map"></div>
+
+            <!-- Tooltip -->
+            <div id="tooltip" class="ol-tooltip">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="tooltip-title"></h5>
+                  <p class="card-text" id="tooltip-body"></p>
+                  <a href="#" class="btn btn-primary" id="gym-website-out" target="_blank">Website</a>
+                </div>
+              </div>
+            </div>
+
+            <script src="map.js"></script>
+          </div>
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+name	address	website	shoes	harness
+AllSports Equipment	52 Ubi Ave 3, #04-44 Frontier, Singapore 408867	http://www.allsports-equipment.com/	Unparallel	Petzl
+Campers Corner	75 Bukit Timah Road, #01-01 Boon Siew Building, Singapore 229833	https://www.camperscorner.com.sg/	La Sportiva, Mad Rock	Arc'teryx, Singing Rock
+Boulder Movement (Downtown)	6A Shenton Way, #B1-03, Downtown Gallery, Singapore 068815	https://www.boulderm.com/	Evolv, OCUN	null
+Boulder Planet	604 Sembawang Rd, #B1-22/23 Sembawang Shopping Centre, Singapore 758459	https://www.boulderplanet.sg/	Evolv, Tenaya	null
+Climb Asia	Focus One Building, 1 Ubi View, #01-18, Singapore 408555	http://www.climb-asia.com/	OCUN, Evolv, La Sportiva, So iLL, Butora	Fixe
+T-Hall.sg	464 Crawford Ln, #01-464, Singapore 190464	https://linktr.ee/thallsg	Scarpa	Edelrid
+Fit Bloc Science Park	87 Science Park Dr, #03-02 The Oasis, Singapore 118260	https://fitbloc.com/	Asakusa, PER-ADRA	null
+Boulder World	10 Eunos Rd 8, #01-205 SingPost Centre (Enrichment Zone, Singapore 408600	https://www.boulderworld.com/	Tenaya	null
+Kinetics Climbing	511 Serangoon Rd, Singapore 218153	http://www.kineticsclimbing.com.sg/	La Sportiva, Red Chili, Scarpa, Wild Country	Wild Country, Edelweiss, Climbing Technology
+The Rock School - Our Tampines Hub	Our Tampines Hub, 1 Tampines Walk, #02-81, Singapore 528523	http://therockschool.sg/	Boreal, Black Diamond	null
+Outdoor Life - Funan	Funan Mall #02-20, 107 North Bridge Rd, Singapore 179105	http://www.outdoorlife.com.sg/	Scarpa, Black Diamond	Black Diamond
+Adventure 21	6 Eu Tong Sen St, #03-55, Singapore 059817	http://www.adventure21.com.sg/	Garra	Mammut
+Decathlon	Various Locations	https://www.decathlon.sg/	Simond	Simond
+boulder+ Chevrons	48 Boon Lay Way, #04-01 The Chevrons, Singapore 609961	http://www.boulderplusclimbing.com/	Butora	null
+boruda Climbing	991A Alexandra Rd, Singapore 119969	http://boruda.sg/	Tenaya	null
+Ground Up Climbing	60 Tessensohn Road CSC@Tessensohn (Level 2, Singapore 217664	https://www.groundupsg.com/	Tenaya	null

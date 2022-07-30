@@ -1,0 +1,35 @@
+/* .container-fluid, */
+/* .card-group{
+    width: 1080px;
+    margin: 0 auto;
+} */
+
+
+.map {
+    height: 600px;
+    width: 100%;
+  }
+
+/* $container-max-widths: (
+sm: 700px,
+md: 720px,
+lg: 960px,
+xl: 1140px,
+xxl: 1320px
+); */
+
+.cropped {
+    height: 300px;
+    object-fit: cover;
+}
+
+#gymcounter-on {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-width: 500px) {
+    #gymcounter-on, #gymcounter {
+        font-size: 400%;
+    }
+}
