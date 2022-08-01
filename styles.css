@@ -1,35 +1,61 @@
-/* .container-fluid, */
-/* .card-group{
-    width: 1080px;
-    margin: 0 auto;
-} */
-
-
 .map {
     height: 600px;
     width: 100%;
   }
-
-/* $container-max-widths: (
-sm: 700px,
-md: 720px,
-lg: 960px,
-xl: 1140px,
-xxl: 1320px
-); */
 
 .cropped {
     height: 300px;
     object-fit: cover;
 }
 
-#gymcounter-on {
-    display: inline-block;
-    vertical-align: top;
+/* Timeline styling */
+.timeline {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.outer {
+    border-left: 2px solid #333;
+  }
+
+.timeline-card {
+    margin-left: 20px;
+}
+
+.title::before {
+    content:"";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 999px;
+    left: -32px;
+    top: 16px;
+    border: 3px solid #dc3545;
+}
+
+.card .info p a {
+    text-decoration: none;
+}
+
+#homepage-intro-msg {
+    font-family: 'Poppins';
 }
 
 @media (max-width: 500px) {
     #gymcounter-on, #gymcounter {
         font-size: 400%;
     }
+
+    #logo {
+        height:200px;
+    }
 }
+
+/* html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background:linear-gradient(#71d5e2,#ffffff );
+  } */

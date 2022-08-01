@@ -4,6 +4,7 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link href="styles.css" rel="stylesheet">
 
         <!-- OpenLayers API -->
@@ -16,24 +17,26 @@
         <link rel="stylesheet" href="https://cdn.maptiler.com/ol/v6.12.0/ol.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="pictures/sg_climbing_logo_v1.png">
         <title>SG Climbing</title>
     </head>
     <body>
         <!-- Top bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container my-2">
-              <a class="navbar-brand" href="#">
-                <img src="https://media.istockphoto.com/vectors/girl-is-climbing-in-climbing-hall-bouldering-equipment-indoor-flat-vector-id1310925649?b=1&k=20&m=1310925649&s=612x612&w=0&h=DRL8j_Ps-I8DVHqH7ustBHRF-jynRr0HQjK6hgNKE6o=" width="40" height="40">
+              <a class="navbar-brand" href="index.html">
+                <img src="pictures/sg_climbing_logo_v1.png" width="40" height="40">
                 SG Climbing</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                  <a class="nav-link active" href="#">Climbing Gyms</a>
-                  <a class="nav-link" href="shops.html">Equipment Shops</a>
-                  <!-- <a class="nav-link disabled">Disabled</a> -->
+                  <a class="nav-link me-2" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link me-2" href="intro.html">Introduction</a>
+                  <a class="nav-link me-2 active" href="#">Climbing Gyms</a>
+                  <a class="nav-link me-2" href="shops.html">Equipment Shops</a>
+                  <!-- <a class="nav-link me-2" href="competition.html">Competitions</a> -->
                 </div>
               </div>
             </div>
@@ -46,20 +49,13 @@
                 <!-- Filters -->
                 <!-- <div class="container"> -->
                   <!-- <div class="col"> -->
-                    <button class="btn btn-primary shadow-none text-end mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
-                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-                      </svg>
-                        Filters
+                    <button class="btn btn-outline-danger shadow-none text-end mt-2 bi bi-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                         Filters
                     </button>
                   <!-- </div> -->
                   <!-- Reset view button -->
                   <!-- <div class="col"> -->
-                    <button class="btn btn-primary shadow-none text-end mt-2" id="reset-view" type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-                      </svg>
+                    <button class="btn btn-outline-danger shadow-none text-end mt-2 bi bi-arrow-clockwise" id="reset-view" type="button">
                       Reset View
                     </button>
                   <!-- </div> -->
@@ -125,12 +121,15 @@
                 <div class="card-body">
                   <h5 class="card-title" id="tooltip-title"></h5>
                   <p class="card-text" id="tooltip-body"></p>
-                  <a href="#" class="btn btn-primary" id="gym-website-out" target="_blank">Website</a>
+                  <a href="#" class="btn btn-outline-danger bi bi-box-arrow-up-right" id="gym-website-out" target="_blank">
+                     Website
+                  </a>
                 </div>
               </div>
             </div>
 
             <script src="map.js"></script>
+            <p class="text-muted fs-6 fw-light">Last updated on 31 July 2022</p>
           </div>
 
     </body>

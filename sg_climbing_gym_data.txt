@@ -33,4 +33,4 @@ b8A	1.343412358289865	103.94154989763433	03-06, 6 Tampines Street 92, yo:HA Comm
 boulder+ Aperia	1.3099093509340745	103.86418826818968	12 Kallang Ave, #03-17 The Aperia Mall, Singapore 339511	http://www.boulderplusclimbing.com/	true	false	false	false	false	false	false
 boulder+ Chevrons	1.331039974403834	103.74829513707856	48 Boon Lay Way, #04-01 The Chevrons, Singapore 609961	http://www.boulderplusclimbing.com/	true	false	false	false	false	true	false
 Z-Vertigo Boulder Gym	1.34313167188941	103.77607864051343	170 Upper Bukit Timah Rd, B2-20B, Singapore 588179	https://zvertigobouldergym.wixsite.com/zvert	true	false	false	false	false	false	false
-
+Ark Bloc	1.3921381958493806	103.91643840298988	6 Tebing Ln, #01-05, Singapore 828835	https://arkbloc.com/	true	false	false	false	false	false	false
